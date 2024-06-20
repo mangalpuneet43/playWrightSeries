@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" thread-count="2" parallel="tests" verbose="1">
+    <listeners>
+        <listener class-name="playwrightFactory.ExtentReportListener"/>
+    </listeners>
+    <test name="HomePage">
+        <classes>
+            <class name="playWrightTest.HomePageTest">
+        </class>
+        </classes>
+    </test>
+    <test name="LoginPage">
+        <classes>
+            <class name="playWrightTest.LoginPageTest">
+            </class>
+        </classes>
+    </test>
+</suite>
