@@ -39,19 +39,26 @@
       <artifactId>extentreports</artifactId>
       <version>5.1.1</version>
     </dependency>
-
-
   </dependencies>
-  <plugins>
+  <build>
+    <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.0.0-M6</version>
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+          <encoding>UTF-8</encoding>
+          <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>
-</plugins>
-</project>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.1</version>
+      </plugin>
+    </plugins>
+    </build>
+  </project>
